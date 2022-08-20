@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.games;
 
 import org.apache.commons.lang3.RandomUtils;
 
