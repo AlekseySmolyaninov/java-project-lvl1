@@ -9,7 +9,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
-    public static int ROUNDS = 4;
+    public static int ROUNDS = 3;
 
     public static void play(String rule, String[][] questionAndAnswers) {
 

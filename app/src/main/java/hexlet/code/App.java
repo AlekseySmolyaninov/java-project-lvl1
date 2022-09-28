@@ -27,6 +27,8 @@ public class App {
             Progression.gameProgression();
         } else if (gameNumber == 6) {
             Prime.gamePrime();
+        } else if (gameNumber == 1) {
+            Greet.nameUser();
         }
     }
 }
