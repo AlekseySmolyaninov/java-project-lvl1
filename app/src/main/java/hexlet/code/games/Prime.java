@@ -17,6 +17,7 @@ public class Prime {
         }
         Engine.play(rule, questionAndAnswers);
     }
+
     public static boolean isPrime(int randomNumber) {
         if (randomNumber == 1) {
             return true;

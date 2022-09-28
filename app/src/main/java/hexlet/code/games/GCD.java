@@ -10,7 +10,7 @@ public class GCD {
 
         String rule = "Find the greatest common divisor of given numbers.";
 
-        String[][] questionAndAnswers = new String[Engine.ROUNDS][2];
+        String[][] questionAndAnswers = new String[Engine.ROUNDS][3];
 
 
         int result = 0;
@@ -21,6 +21,16 @@ public class GCD {
             questionAndAnswers[i][0] = String.valueOf(randomNumber1);
             questionAndAnswers[i][1] = String.valueOf(randomNumber2);
 
+            while (randomNumber1 != randomNumber2) {
+                if (randomNumber1 > randomNumber2) {
+                    randomNumber1 = randomNumber1 - randomNumber2;
+                } else {
+                    randomNumber2 = randomNumber2 - randomNumber1;
+                }
+            }
+            result = randomNumber1;
+
+            questionAndAnswers[i][2] = String.valueOf(result);
 
         }
         Engine.play(rule, questionAndAnswers);

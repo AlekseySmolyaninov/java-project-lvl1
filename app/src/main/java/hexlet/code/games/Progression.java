@@ -31,9 +31,9 @@ public class Progression {
             int randomIndex = new Random().nextInt(numbersWords.length);  // выбираем случайный элемент созданной прогрессии
             int randomNumber = Integer.parseInt(numbersWords[randomIndex]);
             numbersWords[randomIndex] = ".."; // заменяем его на ..
-
+//
             questionAndAnswers[i][0] = String.valueOf(randomNumber);
-            questionAndAnswers[i][1] = Arrays.toString(numbersWords);
+            questionAndAnswers[i][1] = String.join(" ", numbersWords);
         }
 
         Engine.play(rule, questionAndAnswers);
