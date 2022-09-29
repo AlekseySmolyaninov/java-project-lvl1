@@ -1,25 +1,29 @@
 package hexlet.code.games;
-
 import hexlet.code.Engine;
-import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.RandomUtils;
-
-import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Progression {
     public static void gameProgression() {
 
+        final int minLengthArray = 5;
+        final int maxLengthArray = 10;
+        final int minNumberInArray = 1;
+        final int maxNumberInArray = 30;
+        final int minStepInArray = 1;
+        final int maxStepInArray = 7;
+        final int sizeOfArray = 2;
+
         String rule = "What number is missing in the progression?";
-        String[][] questionAndAnswers = new String[Engine.rounds][2];
-        for (var i = 0; i < Engine.rounds; i++) {
+
+        String[][] questionAndAnswers = new String[Engine.ROUNDS][sizeOfArray];
+        for (var i = 0; i < Engine.ROUNDS; i++) {
 
 
-            int[] numbers = new int[RandomUtils.nextInt(5, 10)];
+            int[] numbers = new int[RandomUtils.nextInt(minLengthArray, maxLengthArray)];
             String[] numbersWords = new String[numbers.length];
-            int x = RandomUtils.nextInt(1, 30); // формируем первое случайное число массива
-            int d = RandomUtils.nextInt(1, 7); // формируе  случайный шаг прогрессии
+            int x = RandomUtils.nextInt(minNumberInArray, maxNumberInArray); // формируем первое случайное число массива
+            int d = RandomUtils.nextInt(minStepInArray, maxStepInArray); // формируе  случайный шаг прогрессии
 
             numbers[0] = x; // задаем перый элемент массива
             for (int j = 1; j < numbers.length; j++) {    // цикл
@@ -30,12 +34,10 @@ public class Progression {
             }
             int randomIndex = new Random().nextInt(numbersWords.length);
             int randomNumber = Integer.parseInt(numbersWords[randomIndex]);
-            numbersWords[randomIndex] = ".."; // заменяем его на ..
-//
+            numbersWords[randomIndex] = "..";
             questionAndAnswers[i][0] = String.valueOf(randomNumber);
             questionAndAnswers[i][1] = String.join(" ", numbersWords);
         }
-
         Engine.play(rule, questionAndAnswers);
     }
 }

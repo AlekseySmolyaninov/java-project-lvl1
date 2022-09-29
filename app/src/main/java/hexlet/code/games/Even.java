@@ -11,9 +11,10 @@ public class Even {
 
         final int minNumber = 1;
         final int maxNumber = 1000;
-        String[][] questionAndAnswers = new String[Engine.rounds][2];
+        final int sizeOfArray = 2;
+        String[][] questionAndAnswers = new String[Engine.ROUNDS][sizeOfArray];
 
-        for (var i = 0; i < Engine.rounds; i++) {
+        for (var i = 0; i < Engine.ROUNDS; i++) {
 
             int randomNumber = RandomUtils.nextInt(minNumber, maxNumber);
 
@@ -24,11 +25,7 @@ public class Even {
     }
 
     public static boolean isEven(int randomNumber) {
-        if (randomNumber % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+        return randomNumber % 2 == 0;
 
+    }
 }

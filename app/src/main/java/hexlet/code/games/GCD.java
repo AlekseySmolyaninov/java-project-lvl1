@@ -3,20 +3,24 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
-import java.util.Scanner;
-
 public class GCD {
     public static void gameGcd() {
 
         String rule = "Find the greatest common divisor of given numbers.";
 
-        String[][] questionAndAnswers = new String[Engine.rounds][3];
+        final int minRandomNumber1 = 1;
+        final int maxRandomNumber1 = 20;
+        final int minRandomNumber2 = 1;
+        final int maxRandomNumber2 = 50;
+        final int sizeOfArray = 3;
+
+        String[][] questionAndAnswers = new String[Engine.ROUNDS][sizeOfArray];
 
 
         int result = 0;
-        for (var i = 0; i < Engine.rounds; i++) {
-            int randomNumber1 = RandomUtils.nextInt(1, 20);  // загадываем число
-            int randomNumber2 = RandomUtils.nextInt(1, 50); // загадываем число 2
+        for (var i = 0; i < Engine.ROUNDS; i++) {
+            int randomNumber1 = RandomUtils.nextInt(minRandomNumber1, maxRandomNumber1);  // загадываем число
+            int randomNumber2 = RandomUtils.nextInt(minRandomNumber2, maxRandomNumber2); // загадываем число 2
 
             questionAndAnswers[i][0] = String.valueOf(randomNumber1);
             questionAndAnswers[i][1] = String.valueOf(randomNumber2);

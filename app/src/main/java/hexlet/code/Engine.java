@@ -9,7 +9,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static final int rounds = 3;
+    public static final int ROUNDS = 3;
 
     public static void play(String rule, String[][] questionAndAnswers) {
 
@@ -24,9 +24,9 @@ public class Engine {
                 System.out.println("Question: " + questionAndAnswers[i][0] + " " + questionAndAnswers[i][3]
                         + " " + questionAndAnswers[i][1]);
                 String answer = sc.nextLine();
-                    if (answer.equals(questionAndAnswers[i][2])) {
+                if (answer.equals(questionAndAnswers[i][2])) {
                     System.out.println("Correct");
-                    } else {
+                } else {
                     System.out.println("\'" + answer + "\'" + " is wrong answer ;(. Correct answer was "
                             + "\'" + questionAndAnswers[i][2] + "\'");
                     System.out.println("Let's try again, " + name + "!");
