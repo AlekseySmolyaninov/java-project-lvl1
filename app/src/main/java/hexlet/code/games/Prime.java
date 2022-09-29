@@ -11,7 +11,8 @@ public class Prime {
         String[][] questionAndAnswers = new String[Engine.rounds][2];
         for (int i = 0; i < Engine.rounds; i++) {
 
-            int randomNumber = RandomUtils.nextInt(1, 20);
+//            int randomNumber = RandomUtils.nextInt(1, 20);
+            int randomNumber = 1;
             questionAndAnswers[i][0] = String.valueOf(randomNumber);
             questionAndAnswers[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }

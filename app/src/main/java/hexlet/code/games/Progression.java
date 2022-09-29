@@ -23,12 +23,12 @@ public class Progression {
 
             numbers[0] = x; // задаем перый элемент массива
             for (int j = 1; j < numbers.length; j++) {    // цикл
-                numbers[j] = numbers[j - 1] + d;// создаем математическую прогрессию
+                numbers[j] = numbers[j - 1] + d; // создаем математическую прогрессию
                 for (int k = 0; k < numbersWords.length; k++) {
                     numbersWords[k] = String.valueOf(numbers[k]);
                 }
             }
-            int randomIndex = new Random().nextInt(numbersWords.length);  // выбираем случайный элемент созданной прогрессии
+            int randomIndex = new Random().nextInt(numbersWords.length);
             int randomNumber = Integer.parseInt(numbersWords[randomIndex]);
             numbersWords[randomIndex] = ".."; // заменяем его на ..
 //
