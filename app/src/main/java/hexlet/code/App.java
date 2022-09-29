@@ -7,12 +7,12 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        int gameGreet = 1;
-        int gameEven = 2;
-        int gameCalc = 3;
-        int gameGCD = 4;
-        int gameProgression = 5;
-        int gamePrime = 6;
+//        int gameGreet = 1;
+//        int gameEven = 2;
+//        int gameCalc = 3;
+//        int gameGCD = 4;
+//        int gameProgression = 5;
+//        int gamePrime = 6;
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.\n 1 - Greet\n 2 - Even\n 3 - Calc\n "
                 + "4 - GCD\n " + "5 - Progression\n 6 - Prime\n 0 - Exit\n " + "Your choice: ");
@@ -22,17 +22,17 @@ public class App {
         }
         System.out.println("Welcome to the Brain Games!");
 
-        if (gameNumber == gameGreet) {
+        if (gameNumber == 1) {
             Greet.nameUser();
-        } else if (gameNumber == gameEven) {
+        } else if (gameNumber == 2) {
             Even.gameEven();
-        } else if (gameNumber == gameCalc) {
+        } else if (gameNumber == 3) {
             Calc.gameCalc();
-        } else if (gameNumber == gameGCD) {
+        } else if (gameNumber == 4) {
             GCD.gameGcd();
-        } else if (gameNumber == gameProgression) {
+        } else if (gameNumber == 5) {
             Progression.gameProgression();
-        } else if (gameNumber == gamePrime) {
+        } else if (gameNumber == 6) {
             Prime.gamePrime();
         }
     }
