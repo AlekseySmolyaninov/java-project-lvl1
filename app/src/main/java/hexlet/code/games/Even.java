@@ -9,11 +9,12 @@ public class Even {
 
         String rule = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
+        final int minNumber = 1;
+        final int maxNumber = 1000;
         String[][] questionAndAnswers = new String[Engine.rounds][2];
 
         for (var i = 0; i < Engine.rounds; i++) {
-            int minNumber = 1;
-            int maxNumber = 1000;
+
             int randomNumber = RandomUtils.nextInt(minNumber, maxNumber);
 
             questionAndAnswers[i][0] = String.valueOf(randomNumber);
