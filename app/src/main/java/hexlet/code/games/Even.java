@@ -12,8 +12,9 @@ public class Even {
         String[][] questionAndAnswers = new String[Engine.rounds][2];
 
         for (var i = 0; i < Engine.rounds; i++) {
-
-            int randomNumber = RandomUtils.nextInt(1, 1000);
+            int minNumber = 1;
+            int maxNumber = 1000;
+            int randomNumber = RandomUtils.nextInt(minNumber, maxNumber);
 
             questionAndAnswers[i][0] = String.valueOf(randomNumber);
             questionAndAnswers[i][1] = isEven(randomNumber) ? "yes" : "no";
