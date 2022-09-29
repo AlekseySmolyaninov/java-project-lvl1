@@ -6,6 +6,8 @@ import org.apache.commons.lang3.RandomUtils;
 import java.util.Random;
 
 public class Calc {
+
+    public static final int INDEX_OF_ARRAY_FOR_OPERATORS = 3;
     public static void gameCalc() {
 
         String rule = "What is the result of the expression?";
@@ -40,7 +42,7 @@ public class Calc {
             questionAndAnswers[i][0] = String.valueOf(randomNumber1);
             questionAndAnswers[i][1] = String.valueOf(randomNumber2);
             questionAndAnswers[i][2] = String.valueOf(result);
-            questionAndAnswers[i][3] = operators[z];
+            questionAndAnswers[i][INDEX_OF_ARRAY_FOR_OPERATORS] = operators[z];
         }
         Engine.play(rule, questionAndAnswers);
     }

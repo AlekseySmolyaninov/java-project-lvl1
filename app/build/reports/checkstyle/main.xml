@@ -5,10 +5,8 @@
 <file name="/Users/alekseysmolyaninov/IdeaProjects/app/app/src/main/java/hexlet/code/Cli.java">
 </file>
 <file name="/Users/alekseysmolyaninov/IdeaProjects/app/app/src/main/java/hexlet/code/Engine.java">
-<error line="24" column="106" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="/Users/alekseysmolyaninov/IdeaProjects/app/app/src/main/java/hexlet/code/games/Calc.java">
-<error line="43" column="35" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="/Users/alekseysmolyaninov/IdeaProjects/app/app/src/main/java/hexlet/code/games/Even.java">
 </file>
