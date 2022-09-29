@@ -8,8 +8,8 @@ public class Prime {
 
         String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'";
 
-        String[][] questionAndAnswers = new String[Engine.ROUNDS][2];
-        for (int i = 0; i < Engine.ROUNDS; i++) {
+        String[][] questionAndAnswers = new String[Engine.rounds][2];
+        for (int i = 0; i < Engine.rounds; i++) {
 
             int randomNumber = RandomUtils.nextInt(1, 20);
             questionAndAnswers[i][0] = String.valueOf(randomNumber);

@@ -10,11 +10,11 @@ public class GCD {
 
         String rule = "Find the greatest common divisor of given numbers.";
 
-        String[][] questionAndAnswers = new String[Engine.ROUNDS][3];
+        String[][] questionAndAnswers = new String[Engine.rounds][3];
 
 
         int result = 0;
-        for (var i = 0; i < Engine.ROUNDS; i++) {
+        for (var i = 0; i < Engine.rounds; i++) {
             int randomNumber1 = RandomUtils.nextInt(1, 20);  // загадываем число
             int randomNumber2 = RandomUtils.nextInt(1, 50); // загадываем число 2
 

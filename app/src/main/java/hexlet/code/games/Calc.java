@@ -10,9 +10,9 @@ public class Calc {
 
         String rule = "What is the result of the expression?";
 
-        String[][] questionAndAnswers = new String[Engine.ROUNDS][4];
+        String[][] questionAndAnswers = new String[Engine.rounds][4];
 
-        for (var i = 0; i < Engine.ROUNDS; i++) {
+        for (var i = 0; i < Engine.rounds; i++) {
             int randomNumber1 = RandomUtils.nextInt(1, 10);  // загадываем число
             int randomNumber2 = RandomUtils.nextInt(1, 10); // загадываем число 2
             String[] operators = {"+", "-", "*"};

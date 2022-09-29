@@ -12,8 +12,8 @@ public class Progression {
     public static void gameProgression() {
 
         String rule = "What number is missing in the progression?";
-        String[][] questionAndAnswers = new String[Engine.ROUNDS][2];
-        for (var i = 0; i < Engine.ROUNDS; i++) {
+        String[][] questionAndAnswers = new String[Engine.rounds][2];
+        for (var i = 0; i < Engine.rounds; i++) {
 
 
             int[] numbers = new int[RandomUtils.nextInt(5, 10)];
