@@ -21,7 +21,7 @@ public class Engine {
 
         for (var i = 0; i < questionAndAnswers.length; i++) {
             if (rule.equals("What is the result of the expression?")) {
-                System.out.println("Question: " + questionAndAnswers[i][0] + questionAndAnswers[i][3] + questionAndAnswers[i][1]);
+                System.out.println("Question: " + questionAndAnswers[i][0] + " " + questionAndAnswers[i][3] + " " + questionAndAnswers[i][1]);
                 String answer = sc.nextLine();
                     if (answer.equals(questionAndAnswers[i][2])) {
                     System.out.println("Correct");
