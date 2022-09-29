@@ -9,7 +9,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static int rounds = 3;
+    public static final int rounds = 3;
 
     public static void play(String rule, String[][] questionAndAnswers) {
 
