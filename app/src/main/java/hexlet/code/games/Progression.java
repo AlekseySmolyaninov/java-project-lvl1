@@ -32,7 +32,7 @@ public class Progression {
 
             int randomNumber = Integer.parseInt(array[randomIndex]);
             array[randomIndex] = "..";
-            questionAndAnswers[i][0] = Arrays.toString(array);
+            questionAndAnswers[i][0] = String.join(" ", array);
             questionAndAnswers[i][1] = Integer.toString((randomNumber));
 
 
