@@ -8,6 +8,7 @@ import java.util.Random;
 public class Calc {
 
     public static final int INDEX_OF_ARRAY_FOR_OPERATORS = 3;
+
     public static void gameCalc() {
 
         String rule = "What is the result of the expression?";
@@ -16,7 +17,7 @@ public class Calc {
         final int maxRandomNumber1 = 10;
         final int minRandomNumber2 = 1;
         final int maxRandomNumber2 = 10;
-        final int sizeOfArray = 4;
+        final int sizeOfArray = 2;
 
         String[][] questionAndAnswers = new String[Engine.ROUNDS][sizeOfArray];
 
@@ -24,9 +25,9 @@ public class Calc {
             int randomNumber1 = RandomUtils.nextInt(minRandomNumber1, maxRandomNumber1);  // загадываем число
             int randomNumber2 = RandomUtils.nextInt(minRandomNumber2, maxRandomNumber2); // загадываем число 2
             String[] operators = {"+", "-", "*"};
-            int z = new Random().nextInt(operators.length);
+            int randomOperators = new Random().nextInt(operators.length);
             int result = 0;
-            switch (operators[z]) {
+            switch (operators[randomOperators]) {
                 case "+":
                     result = randomNumber1 + randomNumber2;
                     break;
@@ -39,10 +40,9 @@ public class Calc {
                 default:
                     break;
             }
-            questionAndAnswers[i][0] = String.valueOf(randomNumber1);
-            questionAndAnswers[i][1] = String.valueOf(randomNumber2);
-            questionAndAnswers[i][2] = String.valueOf(result);
-            questionAndAnswers[i][INDEX_OF_ARRAY_FOR_OPERATORS] = operators[z];
+            questionAndAnswers[i][0] = randomNumber1 + " " + operators[randomOperators] + " " + randomNumber2;
+            questionAndAnswers[i][1] = String.valueOf(result);
+
         }
         Engine.play(rule, questionAndAnswers);
     }

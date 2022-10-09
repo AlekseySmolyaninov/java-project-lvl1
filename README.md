@@ -1,9 +1,8 @@
-https://asciinema.org/a/mcnjQeIKlaz9TV31upjEkRYl5
-https://asciinema.org/connect/7ba20b76-27a3-44ac-a02b-38e157db111e
- https://asciinema.org/connect/7ba20b76-27a3-44ac-a02b-38e157db111e
- https://asciinema.org/connect/7ba20b76-27a3-44ac-a02b-38e157db111e
- https://asciinema.org/connect/7ba20b76-27a3-44ac-a02b-38e157db111e
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/AlekseySmolyaninov/java-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AlekseySmolyaninov/java-project-lvl1/actions)
+game Even: <a href="https://asciinema.org/a/7QYO7A6zOSFxq4YuOJkeU9mjg" target="_blank"><img src="https://asciinema.org/a/7QYO7A6zOSFxq4YuOJkeU9mjg.svg" /></a>
+game Calc: <a href="https://asciinema.org/a/cISOOmRfM9306wmSJjtGe8SOG" target="_blank"><img src="https://asciinema.org/a/cISOOmRfM9306wmSJjtGe8SOG.svg" /></a>
+game GCD: <a href="https://asciinema.org/a/xAODEgZDnOt6MZHGRHngWsU8H" target="_blank"><img src="https://asciinema.org/a/xAODEgZDnOt6MZHGRHngWsU8H.svg" /></a>
+game Progression: <a href="https://asciinema.org/a/HJvjXBmFsqzpTkiCcsEmnJIlf" target="_blank"><img src="https://asciinema.org/a/HJvjXBmFsqzpTkiCcsEmnJIlf.svg" /></a>
+gameEven: <a href="https://asciinema.org/a/qf4LdVHIh24PwPQJQ6LLyngsP" target="_blank"><img src="https://asciinema.org/a/qf4LdVHIh24PwPQJQ6LLyngsP.svg" /></a>
 
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+<a href="https://codeclimate.com/github/AlekseySmolyaninov/java-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/1fe40d341bbcd421d36c/maintainability" /></a>
+

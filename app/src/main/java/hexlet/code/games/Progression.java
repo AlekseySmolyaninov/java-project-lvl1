@@ -1,6 +1,9 @@
 package hexlet.code.games;
+
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
+
+import java.util.Arrays;
 import java.util.Random;
 
 public class Progression {
@@ -20,24 +23,33 @@ public class Progression {
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
 
-            int[] numbers = new int[RandomUtils.nextInt(minLengthArray, maxLengthArray)];
-            String[] numbersWords = new String[numbers.length];
-            int x = RandomUtils.nextInt(minNumberInArray, maxNumberInArray); // формируем первое случайное число массива
-            int d = RandomUtils.nextInt(minStepInArray, maxStepInArray); // формируе  случайный шаг прогрессии
+            int[] lengthOfArray = new int[RandomUtils.nextInt(minLengthArray, maxLengthArray)];
+            int firstNumberOfArray = RandomUtils.nextInt(minNumberInArray, maxNumberInArray);
+            int stepOfArray = RandomUtils.nextInt(minStepInArray, maxStepInArray);
 
-            numbers[0] = x; // задаем перый элемент массива
-            for (int j = 1; j < numbers.length; j++) {    // цикл
-                numbers[j] = numbers[j - 1] + d; // создаем математическую прогрессию
-                for (int k = 0; k < numbersWords.length; k++) {
-                    numbersWords[k] = String.valueOf(numbers[k]);
-                }
-            }
-            int randomIndex = new Random().nextInt(numbersWords.length);
-            int randomNumber = Integer.parseInt(numbersWords[randomIndex]);
-            numbersWords[randomIndex] = "..";
-            questionAndAnswers[i][0] = String.valueOf(randomNumber);
-            questionAndAnswers[i][1] = String.join(" ", numbersWords);
+            String[] array = isProgression(firstNumberOfArray, stepOfArray, lengthOfArray);
+            int randomIndex = new Random().nextInt(array.length);
+
+            int randomNumber = Integer.parseInt(array[randomIndex]);
+            array[randomIndex] = "..";
+            questionAndAnswers[i][0] = Arrays.toString(array);
+            questionAndAnswers[i][1] = Integer.toString((randomNumber));
+
+
         }
         Engine.play(rule, questionAndAnswers);
+
+    }
+
+    public static String[] isProgression(int firstNumberOfArray, int stepOfArray, int[] lengthOfArray) {
+        String[] numbersWords = new String[lengthOfArray.length];
+        lengthOfArray[0] = firstNumberOfArray;
+        for (int j = 1; j < lengthOfArray.length; j++) {    // цикл
+            lengthOfArray[j] = lengthOfArray[j - 1] + stepOfArray; // создаем математическую прогрессию
+            for (int k = 0; k < numbersWords.length; k++) {
+                numbersWords[k] = String.valueOf(lengthOfArray[k]);
+            }
+        }
+        return numbersWords;
     }
 }
