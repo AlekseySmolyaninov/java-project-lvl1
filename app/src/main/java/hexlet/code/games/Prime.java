@@ -10,7 +10,7 @@ public class Prime {
         final int maxRandomNumber = 20;
         final int sizeOfArray = 2;
 
-        String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'";
+        String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
         String[][] questionAndAnswers = new String[Engine.ROUNDS][sizeOfArray];
         for (int i = 0; i < Engine.ROUNDS; i++) {
