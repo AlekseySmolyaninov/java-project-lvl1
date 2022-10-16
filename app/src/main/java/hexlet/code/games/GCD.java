@@ -22,13 +22,13 @@ public class GCD {
             int randomNumber2 = RandomUtils.nextInt(minRandomNumber2, maxRandomNumber2); // загадываем число 2
 
             questionAndAnswers[i][0] = randomNumber1 + " " + randomNumber2;
-            questionAndAnswers[i][1] = String.valueOf(isGSD(randomNumber1, randomNumber2));
+            questionAndAnswers[i][1] = String.valueOf(getGSD(randomNumber1, randomNumber2));
 
         }
         Engine.play(rule, questionAndAnswers);
     }
 
-    public static int isGSD(int randomNumber1, int randomNumber2) {
+    public static int getGSD(int randomNumber1, int randomNumber2) {
         while (randomNumber1 != randomNumber2) {
             if (randomNumber1 > randomNumber2) {
                 randomNumber1 = randomNumber1 - randomNumber2;
