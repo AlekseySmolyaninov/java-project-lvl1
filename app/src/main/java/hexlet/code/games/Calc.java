@@ -25,26 +25,51 @@ public class Calc {
             int randomNumber1 = RandomUtils.nextInt(minRandomNumber1, maxRandomNumber1);  // загадываем число
             int randomNumber2 = RandomUtils.nextInt(minRandomNumber2, maxRandomNumber2); // загадываем число 2
             String[] operators = {"+", "-", "*"};
-            int randomOperators = new Random().nextInt(operators.length);
-            int result = 0;
-            switch (operators[randomOperators]) {
-                case "+":
-                    result = randomNumber1 + randomNumber2;
-                    break;
-                case "-":
-                    result = randomNumber1 - randomNumber2;
-                    break;
-                case "*":
-                    result = randomNumber1 * randomNumber2;
-                    break;
-                default:
-                    break;
-            }
-            questionAndAnswers[i][0] = randomNumber1 + " " + operators[randomOperators] + " " + randomNumber2;
+
+            String operator = getOperator(operators);
+            int result = getCalc(randomNumber1, operator, randomNumber2);
+
+            questionAndAnswers[i][0] = randomNumber1 + " " + operator + " " + randomNumber2;
             questionAndAnswers[i][1] = String.valueOf(result);
+
 
         }
         Engine.play(rule, questionAndAnswers);
+    }
+
+    public static String getOperator (String[] operators) {
+
+        int randomOperators = new Random().nextInt(operators.length);
+        String operator = null;
+        switch (operators[randomOperators]) {
+            case "+":
+                operator = "+";
+                break;
+            case "-":
+                operator = "-";
+                break;
+            case "*":
+                operator = "*";
+                break;
+            default:
+                break;
+        }
+        return operator;
+    }
+
+    public static int getCalc(int randomNumber1, String operator, int randomNumber2) {
+        int result = 0;
+        switch (operator) {
+            case "+":
+                result = randomNumber1 + randomNumber2;
+                break;
+            case "-":
+                result = randomNumber1 - randomNumber2;
+                break;
+            case "*":
+                result = randomNumber1 * randomNumber2;
+                break;
+        } return result;
     }
 }
 
