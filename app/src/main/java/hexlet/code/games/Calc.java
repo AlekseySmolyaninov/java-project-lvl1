@@ -37,7 +37,7 @@ public class Calc {
         Engine.play(rule, questionAndAnswers);
     }
 
-    public static String getOperator (String[] operators) {
+    public static String getOperator(String[] operators) {
 
         int randomOperators = new Random().nextInt(operators.length);
         String operator = null;
@@ -68,6 +68,8 @@ public class Calc {
                 break;
             case "*":
                 result = randomNumber1 * randomNumber2;
+                break;
+            default:
                 break;
         } return result;
     }
